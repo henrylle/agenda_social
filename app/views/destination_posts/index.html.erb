@@ -5,8 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Nome</th>
       <th>Link</th>
+      <th>Total Posts</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,7 +16,8 @@
     <% @destination_posts.each do |destination_post| %>
       <tr>
         <td><%= destination_post.name %></td>
-        <td><%= destination_post.link %></td>
+        <td><%= link_to destination_post.name, destination_post.link %></td>
+        <td><%= destination_post.post.count %></td>
         <td><%= link_to 'Show', destination_post %></td>
         <td><%= link_to 'Edit', edit_destination_post_path(destination_post) %></td>
         <td><%= link_to 'Destroy', destination_post, method: :delete, data: { confirm: 'Are you sure?' } %></td>

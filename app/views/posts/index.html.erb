@@ -5,10 +5,12 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Title</th>
-      <th>Content</th>
-      <th>Post date</th>
+      <th>Nome</th>
+      <th>Destino</th>
+      <th>Título</th>
+      <th>Conteúdo</th>
+      <th>Imagem</th>
+      <th>Data da Postagem</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,8 +19,14 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.name %></td>
+        <td><%= link_to post.destination_post.name, post.destination_post.link %></td>
         <td><%= post.title %></td>
         <td><%= post.content %></td>
+        <%if post.url_photo.present?%>
+          <td><%= image_tag("#{url_for(post.url_photo)}") %></td>
+        <%else%>
+          <td>-</td>
+        <%end%>
         <td><%= post.post_date %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
