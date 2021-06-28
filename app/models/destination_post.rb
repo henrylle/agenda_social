@@ -1,0 +1,2 @@
+class DestinationPost < ApplicationRecord
+end

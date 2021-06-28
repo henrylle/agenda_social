@@ -1,0 +1,2 @@
+module DestinationPostsHelper
+end
