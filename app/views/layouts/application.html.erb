@@ -6,10 +6,25 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-<%= link_to 'Ir para Home', root_path %>
+  <br>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">    
+    <%= link_to "Home", root_path, :class => "navbar-brand" %>        
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <%= link_to "Listar Posts", posts_path, :class => "nav-link" %>
+        <%= link_to "Gerenciar Destino dos Posts", destination_posts_path, :class => "nav-link" %>                  
+      </div>
+    </div>
+  </div>
+</nav>
+
   <body>
     <%= yield %>
   </body>
