@@ -11,17 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="mb-3">
+    <%= form.label :name, :class=>"form-label" %>
+    <%= form.text_field :name, :class=>"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :link %>
-    <%= form.text_field :link %>
+  <div class="mb-3">
+    <%= form.label :link, :class=>"form-label" %>
+    <%= form.text_field :link, :class=>"form-control" %>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  
+    <%= form.submit "Salvar", :class=>"btn btn-outline-primary" %>
 <% end %>
