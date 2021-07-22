@@ -11,27 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="mb-3">
+    <%= form.label :name, :class=>"form-label" %>
+    <%= form.text_field :name, :class=>"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="mb-3">
+    <%= form.label :title, :class=>"form-label" %>
+    <%= form.text_field :title, :class=>"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_field :content %>
+  <div class="mb-3">
+    <%= form.label :content, :class=>"form-label" %>
+    <%= form.text_field :content, :class=>"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :post_date %>
+  <div class="mb-3">
+    <%= form.label :post_date, :class=>"form-label" %>
     <%= form.datetime_select :post_date %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
-  </div>
+    <%= form.submit "Salvar", :class=>"btn btn-outline-primary" %>
+  </div>  
 <% end %>

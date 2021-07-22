@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nome:</strong>
   <%= @destination_post.name %>
 </p>
 
@@ -10,5 +10,5 @@
   <%= @destination_post.link %>
 </p>
 
-<%= link_to 'Edit', edit_destination_post_path(@destination_post) %> |
-<%= link_to 'Back', destination_posts_path %>
+<%= link_to 'Editar', edit_destination_post_path(@destination_post),:class=>"btn btn-outline-primary" %> |
+<%= link_to 'Voltar', destination_posts_path,:class=>"btn btn-outline-danger" %>
